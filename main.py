@@ -1,3 +1,4 @@
+import random
 import requests
 import urllib3
 import json
@@ -37,4 +38,5 @@ if __name__ == '__main__':
             if json_object[i]['REMAIN_CNT'] != '00':
                 print(f'!!!!!!!!!! {now} ' + json_object[i]['DEP_TIME'] + '!!!!!!!!!!')
         print("Done")
-        time.sleep(30)
+        t = random.sample(range(5, 10), 1)[0]
+        time.sleep(t)
